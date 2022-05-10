@@ -13,10 +13,10 @@ function App() {
       {/* navigation bar */}
       <nav>
         <Link to="/">HOME</Link>
-        <Link to="/">REVIEWS</Link>
-        <Link to="/">DASHBOARD</Link>
-        <Link to="/">BLOGS</Link>
-        <Link to="/">ABOUT</Link>
+        <Link to="/reviews">REVIEWS</Link>
+        <Link to="/dashboard">DASHBOARD</Link>
+        <Link to="/blogs">BLOGS</Link>
+        <Link to="/about">ABOUT</Link>
       </nav>
 
       {/* all the routes */}

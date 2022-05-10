@@ -1,0 +1,79 @@
+.homepage{
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
+.heroSection{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroContent{
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 30px;
+    
+    margin-left: 50px;
+}
+.heroContent h1{
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.heroContent h1 span{
+    color: #1C88FF;
+}
+
+.heroContent p{
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.heroImage{
+    flex: 1;
+}
+
+.heroImage img{
+    width: 130%;
+}
+
+
+/* customar reviews Section */
+
+
+.commentSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.commentSection h2{
+    color: #111827;
+    width: 100%;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-block: 10px ;
+}
+
+.commentSection .cardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seeAllBtn{
+    margin-block: 30px;
+    background-color: #1c8affcb;
+    width: 400px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
