@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { ReviewCard } from '../components/ReviewCard'
 import "./home.css"
 
 export const Home = () => {
+    const [reviewsdata, setReviewsdata] = useState([]);
+    
+    useEffect(()=>{
+        fetch("reviewsdata.json")
+        .then(res => res.json())
+        .then(data => setReviewsdata(data))
+    }, [])
+
+
+
   return (
     <div className='homepage'>
         <div className="heroSection">
@@ -18,9 +28,18 @@ export const Home = () => {
         <div className="commentSection">
             <h2>customer Reviews</h2>
             <div className="cardContainer">
-                <ReviewCard/>
-                <ReviewCard/>
-                <ReviewCard/>
+                {reviewsdata.map((review, index) =>
+                (index <= 2 ) &&
+                    <ReviewCard 
+                    key={review.id}
+                    comment ={review.comment}
+                    userName ={review.userName}
+                    image = {review.image}
+                    rating = {review.rating}
+                    
+                    />
+                                
+                )}
             </div>
 
             <button className='seeAllBtn'>See All Reviews</button>

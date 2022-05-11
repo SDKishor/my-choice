@@ -44,5 +44,6 @@ margin: 5px;
 }
 
 .lower .userInfo h3{
+    text-transform: capitalize;
     font-size: 20px;
 }
