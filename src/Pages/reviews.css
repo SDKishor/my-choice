@@ -1,0 +1,12 @@
+.reviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.reviewContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 50px;
+}

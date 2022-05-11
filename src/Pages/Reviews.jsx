@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ReviewCard } from "../components/ReviewCard";
+import useReviewData from "../hooks/useReviewData";
+import "./reviews.css";
 
 export const Reviews = () => {
-  const [reviewsdata, setReviewsdata] = useState([]);
-
-  useEffect(() => {
-    fetch("reviewsdata.json")
-      .then((res) => res.json())
-      .then((data) => setReviewsdata(data));
-  }, []);
+  const [reviewsdata, setReviewsdata] = useReviewData();
 
   return (
     <div className="reviews">
-      <h2>All Reviews</h2>
+      <h2>Customars Feedback</h2>
       <div className="reviewContainer">
         {reviewsdata.map((review) => (
           <ReviewCard
