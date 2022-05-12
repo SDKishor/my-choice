@@ -1,79 +1,112 @@
-.homepage{
-    width: 100%;
-    overflow-x: hidden;
-    
+.homepage {
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.heroSection{
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.heroSection {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.heroContent{
-    flex: 1;
-    text-transform: uppercase;
-    font-size: 30px;
-    
-    margin-left: 50px;
+.heroContent {
+  flex: 1;
+  text-transform: uppercase;
+  font-size: 30px;
+
+  margin-left: 50px;
 }
-.heroContent h1{
-    margin-bottom: 10px;
-    color: #111827;
+.heroContent h1 {
+  margin-bottom: 10px;
+  color: #111827;
 }
 
-.heroContent h1 span{
-    color: #1C88FF;
+.heroContent h1 span {
+  color: #1c88ff;
 }
 
-.heroContent p{
-    text-transform: capitalize;
-    font-size: 18px;
+.heroContent p {
+  text-transform: capitalize;
+  font-size: 18px;
 }
 
-.heroImage{
-    flex: 1;
+.heroImage {
+  flex: 1;
 }
 
-.heroImage img{
-    width: 130%;
+.heroImage img {
+  width: 130%;
 }
-
 
 /* customar reviews Section */
 
-
 .commentSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.commentSection h2 {
+  color: #111827;
+  width: 100%;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-block: 10px;
+}
+
+.commentSection .cardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seeAllBtn {
+  margin-block: 30px;
+  background-color: #1c8affcb;
+  width: 400px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media (max-width: 500px) {
+  .heroSection {
+    margin-top: 150px;
+    flex-direction: column;
+
+    height: auto;
+    text-align: center;
+  }
+  .heroContent {
+    width: 90%;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+    margin-bottom: 20px;
+  }
+  .heroContent h1 {
+    font-size: 50px;
+  }
+  .heroImage {
+    margin: 20px 0px;
+  }
+  .heroImage img {
+    width: 90%;
+  }
+  .heroContent p {
+    width: 90%;
+    font-size: 14px;
+  }
 
-.commentSection h2{
-    color: #111827;
-    width: 100%;
-    font-size: 30px;
-    text-transform: uppercase;
-    text-align: center;
-    padding-block: 10px ;
-}
-
-.commentSection .cardContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.seeAllBtn{
-    margin-block: 30px;
-    background-color: #1c8affcb;
-    width: 400px;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 20px;
+  .commentSection .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

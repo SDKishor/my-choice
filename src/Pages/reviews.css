@@ -1,12 +1,18 @@
-.reviews{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reviews h2 {
+  margin-top: 100px;
 }
 
-.reviewContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 50px;
+.reviewContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 500px) {
+  .reviewContainer {
+    grid-template-columns: 1fr;
+  }
 }

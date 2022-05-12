@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { ReviewCard } from "../components/ReviewCard";
 import useReviewData from "../hooks/useReviewData";
 import "./home.css";
 
 export const Home = () => {
   const [reviewsdata, setReviewsdata] = useReviewData();
+
+  let navigate = useNavigate();
 
   return (
     <div className="homepage">
@@ -14,9 +17,9 @@ export const Home = () => {
             <span> money can buy</span>{" "}
           </h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-            suscipit repellat cumque obcaecati magni enim quod, dicta excepturi
-            molestiae error!
+            it is a nice laptop. it is very lite weight and easy to carry. the
+            battary backup of this laptop is very good. and also charge up
+            pretty fast
           </p>
         </div>
         <div className="heroImage">
@@ -41,7 +44,14 @@ export const Home = () => {
           )}
         </div>
 
-        <button className="seeAllBtn">See All Reviews</button>
+        <button
+          className="seeAllBtn"
+          onClick={() => {
+            navigate("/reviews");
+          }}
+        >
+          See All Reviews
+        </button>
       </div>
     </div>
   );

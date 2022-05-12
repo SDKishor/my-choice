@@ -18,6 +18,7 @@ import {
 
 export const Dashboard = () => {
   const [data, setData] = useState([]);
+  const [openMenu, setOpenMenu] = useState(true);
 
   useEffect(() => {
     fetch("data.json")
@@ -25,12 +26,24 @@ export const Dashboard = () => {
       .then((data) => setData(data));
   }, []);
 
+  const handleResize = () => {
+    if (window.innerWidth < 500) {
+      setOpenMenu(false);
+    } else {
+      setOpenMenu(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
+
   return (
     <div className="dashboard">
       <h2>Dashboard</h2>
       <div className="allChartContainer">
         <div className="bar ChartContainer">
-          <BarChart width={550} height={250} data={data}>
+          <BarChart width={openMenu ? 550 : 320} height={250} data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="month" />
             <YAxis />
@@ -41,7 +54,7 @@ export const Dashboard = () => {
           </BarChart>
         </div>
         <div className="pie ChartContainer">
-          <PieChart width={550} height={250}>
+          <PieChart width={openMenu ? 550 : 320} height={250}>
             <Pie
               data={data}
               dataKey="sell"
@@ -66,7 +79,7 @@ export const Dashboard = () => {
         </div>
         <div className="area ChartContainer">
           <AreaChart
-            width={550}
+            width={openMenu ? 550 : 320}
             height={250}
             data={data}
             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
@@ -103,7 +116,7 @@ export const Dashboard = () => {
         </div>
         <div className="line ChartContainer">
           <LineChart
-            width={550}
+            width={openMenu ? 550 : 320}
             height={250}
             data={data}
             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
