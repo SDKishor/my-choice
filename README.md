@@ -1,7 +1,13 @@
-[live Site:](https://magical-maamoul-c54fb5.netlify.app/)
+## project name: MY CHOICE
 
-[ripository link:] (https://github.com/programming-hero-web-course-4/product-analysis-website-SDKishor)
+live Site:[website]](https://magical-maamoul-c54fb5.netlify.app/)
 
-- Item 1
-- Item 2
-- Item 3
+private ripository link:[code](https://github.com/programming-hero-web-course-4/product-analysis-website-SDKishor)
+
+## what did i do in the project
+
+- react router
+- active link
+- custom hook
+- responsive designe
+- showing chart
